@@ -1,4 +1,5 @@
 # ui.R
+library("shinyURL")
 
 shinyUI <- function(request) {
   fluidPage(
@@ -18,13 +19,22 @@ shinyUI <- function(request) {
         sliderInput("range", 
                     label = "Range of interest:",
                     min = 0, max = 100, value = c(0, 100)),
-        bookmarkButton()
+        bookmarkButton(),
+        
+        br(),
+        numericInput("n", "N:", min = 0, max = 100, value = 50),
+        actionButton("goButton", "Go!")
         
       ),
       
       mainPanel(
         plotOutput("map"),
-        textOutput(("text"))
+        textOutput(("text")),
+        verbatimTextOutput("nText"),
+        br(),
+        shinyURL.ui()
+        
+        
                 )
     )
   )
