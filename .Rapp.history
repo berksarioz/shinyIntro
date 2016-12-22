@@ -1,0 +1,18 @@
+load("/Users/berksarioz/Desktop/UMMS/shiny_intro/census_app/data/counties.rds")
+readRDS()
+ls
+readRDS(file="counties.rds")
+dbs <- readRDS(file="counties.rds")
+dbs[1]
+dbs[2]
+dbs[:1]
+head(dbs, 4)
+head(dbs, 100)
+(dbs, 10tail
+tail(dbs, 100)
+dbs[1:10,]
+getwd()
+setwd(..)
+setwd("..")
+getwed()
+getwd()
